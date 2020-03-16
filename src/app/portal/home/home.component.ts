@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  dataTh = {};
+  dataTh: any = {};
   constructor(
     private apiService: ApiService
   ) { }
 
   async ngOnInit() {
     await this.getSummaryTH();
-    
+
   }
 
   async getSummaryTH() {
