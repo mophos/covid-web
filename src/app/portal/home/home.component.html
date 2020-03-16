@@ -4,8 +4,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12">
-          <div style="text-align: center; font-weight: bold; font-size: 5vw;">COVID-19 <img
-              src="../../../assets/pic/thailand_640.png" alt="" width="10%;"> THAILAND</div>
+          <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png"
+              alt="" width="10%;"> THAILAND</div>
         </div>
       </div>
       <div class="row">
@@ -18,8 +18,8 @@
                     ผู้ติดเชื้อ</p>
                   <p class="sum-box1-3">
                     {{dataTh.confirmed || 0}}
-                    <span class="sum-box1-4">+({{dataTh.newConfirmed || 0}})</span></p>
-
+                    <label class="sum-box1-4">+({{dataTh.newConfirmed || 0}})</label>
+                  </p>
                 </div>
               </div>
             </div>
@@ -30,9 +30,8 @@
                     รักษาในรพ.</p>
                   <p class="sum-box2-3">
                     {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}
-                    <span class="sum-box2-4">+({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</span>
+                    <label class="sum-box2-4">+({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</label>
                   </p>
-
                 </div>
               </div>
             </div>
@@ -43,9 +42,8 @@
                     หายแล้ว</p>
                   <p class="sum-box2-3">
                     {{dataTh.recovered || 0}}
-                    <span class="sum-box2-4"> +({{dataTh.newRecovered || 0}})</span>
+                    <label class="sum-box2-4"> +({{dataTh.newRecovered || 0}})</label>
                   </p>
-
                 </div>
               </div>
             </div>
@@ -56,9 +54,8 @@
                     เสียชีวิต</p>
                   <p class="sum-box2-3">
                     {{dataTh.deaths || 0}}
-                    <span class="sum-box2-4"> +({{dataTh.newDeaths || 0}})</span>
+                    <label class="sum-box2-4"> +({{dataTh.newDeaths || 0}})</label>
                   </p>
-
                 </div>
               </div>
             </div>
