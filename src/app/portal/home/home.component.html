@@ -17,9 +17,9 @@
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
                                         ผู้ติดเชื้อ</p>
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                                        {{dataTh.confirmed}}</p>
+                                        {{dataTh.confirmed || 0}}</p>
                                     <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                                        +({{dataTh.newConfirmed}})</p>
+                                        +({{dataTh.newConfirmed || 0}})</p>
                                 </div>
                             </div>
                         </div>
@@ -29,9 +29,9 @@
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
                                         รักษาในรพ.</p>
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                                        {{dataTh.confirmed-dataTh.recovered-dataTh.deaths}}</p>
+                                        {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}</p>
                                     <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                                        +({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths}})</p>
+                                        +({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</p>
                                 </div>
                             </div>
                         </div>
@@ -44,9 +44,9 @@
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
                                         หายแล้ว</p>
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                                        {{dataTh.recovered}}</p>
+                                        {{dataTh.recovered || 0}}</p>
                                     <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                                        +({{dataTh.newRecovered}})</p>
+                                        +({{dataTh.newRecovered || 0}})</p>
                                 </div>
                             </div>
                         </div>
@@ -56,9 +56,9 @@
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
                                         เสียชีวิต</p>
                                     <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                                        {{dataTh.deaths}}</p>
+                                        {{dataTh.deaths || 0}}</p>
                                     <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                                        +({{dataTh.newDeaths}})</p>
+                                        +({{dataTh.newDeaths || 0}})</p>
                                 </div>
                             </div>
                         </div>
