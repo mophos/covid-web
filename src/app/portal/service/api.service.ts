@@ -17,4 +17,10 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+
+  async getSummaryGlobal() {
+    const url = `${this.url}/summary/global`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 }
