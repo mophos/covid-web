@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit() {
     await this.getSummaryTH();
-    console.log(this.dataTh);
     
   }
 
