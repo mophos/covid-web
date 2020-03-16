@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   dataTh: any = {};
   dataGlobal: any = [];
   country: any = [];
+
   constructor(
     private apiService: ApiService
   ) { }

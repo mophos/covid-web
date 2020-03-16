@@ -1,3 +1,4 @@
+import { ApiService } from './service/api.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,6 +12,10 @@ import { HomeComponent } from './home/home.component';
   imports: [
     CommonModule,
     PortalRoutingModule
+  ],
+  providers: [
+    ApiService
   ]
+
 })
 export class PortalModule { }
