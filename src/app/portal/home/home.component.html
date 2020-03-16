@@ -19,7 +19,7 @@
                   <span class="sum-box1-3">
                     {{dataTh.confirmed || 0}}
                   </span>
-                  <label class="sum-box1-4">+({{dataTh.newConfirmed || 0}})</label>
+                  <label class="sum-box1-4">&#8593; {{dataTh.newConfirmed || 0}}</label>
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@
                   <span class="sum-box2-3">
                     {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}
                   </span>
-                  <label class="sum-box2-4">+({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</label>
+                  <label class="sum-box2-4">&#8593; {{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}}</label>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@
                   <span class="sum-box2-3">
                     {{dataTh.recovered || 0}}
                   </span>
-                  <label class="sum-box2-4"> +({{dataTh.newRecovered || 0}})</label>
+                  <label class="sum-box2-4"> &#8593; {{dataTh.newRecovered || 0}}</label>
                 </div>
               </div>
             </div>
@@ -55,7 +55,7 @@
                   <span class="sum-box2-3">
                     {{dataTh.deaths || 0}}
                   </span>
-                  <label class="sum-box2-4"> +({{dataTh.newDeaths || 0}})</label>
+                  <label class="sum-box2-4"> &#8593; {{dataTh.newDeaths || 0}}</label>
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@
                             </div>
                         </div> -->
           </div>
-          <div class="overflow-auto" style="height: 60vh;width: 100%;">
+          <div class="overflow-auto" style="height: 70vh;width: 100%;">
             <div *ngFor="let i of dataGlobal">
               <div class="card overflow-hidden">
                 <div class="card-body" style="background-color: rgba(122, 121, 122, 0.1)">
