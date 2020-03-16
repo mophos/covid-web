@@ -6,9 +6,9 @@
 
 .jumbotron{
     padding-top: 1rem;
-    padding-bottom: 0rem;
-    margin-bottom: 0rem;
-    height: 92vh;
+    /* padding-bottom: 0rem; */
+    /* margin-bottom: 0rem; */
+    /* height: 92vh; */
 }
 .head {
     text-shadow: 3px 3px 4px rgba(0, 0, 0, .5);
