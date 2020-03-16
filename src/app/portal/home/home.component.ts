@@ -1,3 +1,4 @@
+import { ApiService } from './../service/api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  dataTh = {};
+  constructor(
+    private apiService: ApiService
+  ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.getSummaryTH();
+    console.log(this.dataTh);
+    
   }
 
+  async getSummaryTH() {
+    try {
+      const rs: any = await this.apiService.getSummaryTH();
+      if (rs.ok) {
+        this.dataTh = rs.rows;
+      }
+    } catch (error) {
+
+    }
+  }
 }
