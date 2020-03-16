@@ -3,15 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from 'src/app/home/home.component';
 import { LayoutComponent } from 'src/app/layout/layout.component';
 
-const routes: Routes = [{
-  path: '',
-  component: LayoutComponent,
-  children: [
-    // { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
 
-  ]
-}
+const routes: Routes = [
+  { path: '', redirectTo: 'portal', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,20 +1,26 @@
+import { environment } from './../environments/environment';
+import { PortalModule } from './portal/portal.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from 'src/app/home/home.component';
-import { LayoutComponent } from 'src/app/layout/layout.component';
+import { AppComponent } from './app.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    LayoutComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PortalModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [HomeComponent]
+  providers: [
+    { provide: 'API_URL', useValue: environment.apiUrl },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
