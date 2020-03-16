@@ -13,8 +13,10 @@ export class HomeComponent implements OnInit {
     private apiService: ApiService
   ) { }
 
-  ngOnInit() {
-    this.getSummaryTH();
+  async ngOnInit() {
+    await this.getSummaryTH();
+    console.log(this.dataTh);
+    
   }
 
   async getSummaryTH() {

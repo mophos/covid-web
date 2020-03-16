@@ -13,7 +13,8 @@ export class ApiService {
   }
 
   async getSummaryTH() {
-    const rs: any = await this.http.get(`${this.url}/summary/th`).toPromise();
-    return rs.json();
+    const url = `${this.url}/summary/th`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
   }
 }
