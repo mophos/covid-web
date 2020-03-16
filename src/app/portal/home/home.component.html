@@ -4,56 +4,65 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12">
-          <div style="text-align: center; font-weight: bold; font-size: 5vw;">COVID-19 <img src="../../../assets/pic/thailand_640.png"
-              alt="" width="10%;"> THAILAND</div>
+          <div style="text-align: center; font-weight: bold; font-size: 5vw;">COVID-19 <img
+              src="../../../assets/pic/thailand_640.png" alt="" width="10%;"> THAILAND</div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <img src="../../../assets/pic/thailand-map.png" alt="" width="600px;">
-        </div>
-        <div class="col-md-6">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-12 col-sm-12">
               <div class="card" style="background-color: #F7518D; border-radius: 10px;">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">ผู้ติดเชื้อ</p>
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">114</p>
-                  <p style="text-align: center; font-size: 1vw; color: white; font-weight: bold;">+(0)</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    ผู้ติดเชื้อ</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    {{dataTh.confirmed || 0}}</p>
+                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
+                    +({{dataTh.newConfirmed || 0}})</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-4 col-sm-4">
               <div class="card" style="background-color: #FFC300; border-radius: 10px;">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">รักษาในรพ.</p>
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">76</p>
-                  <p style="text-align: center; font-size: 1vw; color: white; font-weight: bold;">+(0)</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    รักษาในรพ.</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}</p>
+                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
+                    +({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</p>
                 </div>
               </div>
             </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-4 col-sm-4">
               <div class="card" style="background-color: #7DD156; border-radius: 10px;">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">หายแล้ว</p>
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">37</p>
-                  <p style="text-align: center; font-size: 1vw; color: white; font-weight: bold;">+(0)</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    หายแล้ว</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    {{dataTh.recovered || 0}}</p>
+                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
+                    +({{dataTh.newRecovered || 0}})</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-4 col-sm-4">
               <div class="card" style="background-color: #546C78; border-radius: 10px;">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">เสียชีวิต</p>
-                  <p style="text-align: center; font-size: 2vw; color: white; font-weight: bold;">1</p>
-                  <p style="text-align: center; font-size: 1vw; color: white; font-weight: bold;">+(0)</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    เสียชีวิต</p>
+                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                    {{dataTh.deaths || 0}}</p>
+                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
+                    +({{dataTh.newDeaths || 0}})</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-md-6">
+          <!-- <img src="../../../assets/pic/thailand-map.png" alt="" width="600px;"> -->
         </div>
       </div>
     </div>
@@ -64,22 +73,28 @@
     <div class="row">
       <div class="col-md-4">
         <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+          mauris
+          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+          euismod.
           Donec sed odio dui. </p>
         <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
       </div>
       <div class="col-md-4">
         <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+          mauris
+          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+          euismod.
           Donec sed odio dui. </p>
         <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
       </div>
       <div class="col-md-4">
         <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-          felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+          porta
+          felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+          fermentum
           massa justo sit amet risus.</p>
         <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
       </div>
