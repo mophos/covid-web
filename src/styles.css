@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+/* .css-1mxp76p{font-weight:400;font-size:1.2rem;margin-bottom:-4px;} */
+
+.sum-box1-1 {
+    margin-bottom: 0px;
+    width: 100%;
+    height: 15vw;
+    background-color: #F7518D;
+    border-radius: 10px;
+}
+
+.sum-box1-2 {
+    /* font-weight: 500; */
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.sum-box1-3 {
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.sum-box1-4 {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.sum-box2-1 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 15vw;
+}
+
+
+.sum-box2-2 {
+    /* font-weight: 500; */
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.sum-box2-3 {
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.sum-box2-4 {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+@media only screen and (max-width:600px) {
+    .sum-box1-1 {
+        margin-bottom: 0px;
+        width: 100%;
+        height: 50vw;
+        background-color: #F7518D;
+        border-radius: 10px;
+    }
+    
+    .sum-box1-2 {
+        /* font-weight: 500; */
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .sum-box1-3 {
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    .sum-box1-4 {
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+
+    .sum-box2-1 {
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-bottom: 0px;
+        width: 100%;
+        height: 50vw;
+    }
+    .sum-box2-2 {
+        /* font-weight: 500; */
+        font-size: 0.8rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .sum-box2-3 {
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    .sum-box2-4 {
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+}
