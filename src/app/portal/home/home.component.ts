@@ -9,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   dataTh: any = {};
+  dataGlobal: any = [];
+  country: any = [];
+
   constructor(
     private apiService: ApiService
   ) { }
 
   async ngOnInit() {
     await this.getSummaryTH();
+    await this.getSummaryGlobal();
 
   }
 
@@ -28,4 +32,25 @@ export class HomeComponent implements OnInit {
 
     }
   }
+
+  async getSummaryGlobal() {
+    try {
+      const rs: any = await this.apiService.getSummaryGlobal();
+      if (rs.ok) {
+        this.dataGlobal = rs.rows;
+      }
+    } catch (error) {
+
+    }
+  }
+
+  // async setCountry() {
+  //   try {
+  //     for (const i of this.dataGlobal) {
+  //       this.country.push(i.country)
+  //     }
+  //   } catch (error) {
+
+  //   }
+  // }
 }
