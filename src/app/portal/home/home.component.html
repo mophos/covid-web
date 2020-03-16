@@ -1,107 +1,109 @@
 <main role="main">
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xs-12">
+                    <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
+                        THAILAND</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-12 col-sm-12" style="padding: 0.1rem;">
+                            <div class="card sum-box1-1">
+                                <div class="card-body">
+                                    <span class="sum-box1-2">ผู้ติดเชื้อ</span>
+                                    <br>
+                                    <span class="sum-box1-3">
+                                        {{dataTh.confirmed || 0}}
+                                        <label class="sum-box1-4">+({{dataTh.newConfirmed || 0}})</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+                            <div class="card sum-box2-1" style="background-color: #FFC300; border-radius: 10px;">
+                                <div class="card-body">
+                                    <span class="sum-box2-2">รักษาในรพ.</span>
+                                    <br>
+                                    <span class="sum-box2-3">
+                                        {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}
+                                        <label
+                                            class="sum-box2-4">+({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+                            <div class="card sum-box2-1" style="background-color: #7DD156; border-radius: 10px;">
+                                <div class="card-body">
+                                    <span class="sum-box2-2">หายแล้ว</span>
+                                    <br>
+                                    <span class="sum-box2-3">
+                                        {{dataTh.recovered || 0}}
+                                        <label class="sum-box2-4"> +({{dataTh.newRecovered || 0}})</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+                            <div class="card sum-box2-1" style="background-color: #546C78; border-radius: 10px;">
+                                <div class="card-body">
+                                    <span class="sum-box2-2">เสียชีวิต</span>
+                                    <br>
+                                    <span class="sum-box2-3">
+                                        {{dataTh.deaths || 0}}
+                                        <label class="sum-box2-4"> +({{dataTh.newDeaths || 0}})</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 margin-mobile-top">
+                    <img src="../../../assets/pic/thailand-map.png" alt="" width="90%;">
+                </div>
+                <div class="col-md-2 col-sm-12 margin-mobile-top"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-xs-12">
-          <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png"
-              alt="" width="10%;"> THAILAND</div>
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod.
+                    Donec sed odio dui. </p>
+                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod.
+                    Donec sed odio dui. </p>
+                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                    porta
+                    felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                    fermentum
+                    massa justo sit amet risus.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-6 col-12 col-sm-12" style="padding: 0.1rem;">
-              <div class="card sum-box1-1">
-                <div class="card-body">
-                  <p class="sum-box1-2">
-                    ผู้ติดเชื้อ</p>
-                  <p class="sum-box1-3">
-                    {{dataTh.confirmed || 0}}
-                    <label class="sum-box1-4">+({{dataTh.newConfirmed || 0}})</label>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-4 col-sm-4" style="padding: 0.1rem;">
-              <div class="card sum-box2-1" style="background-color: #FFC300; border-radius: 10px;">
-                <div class="card-body">
-                  <p class="sum-box2-2">
-                    รักษาในรพ.</p>
-                  <p class="sum-box2-3">
-                    {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}
-                    <label class="sum-box2-4">+({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</label>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-4 col-sm-4" style="padding: 0.1rem;">
-              <div class="card sum-box2-1" style="background-color: #7DD156; border-radius: 10px;">
-                <div class="card-body">
-                  <p class="sum-box2-2">
-                    หายแล้ว</p>
-                  <p class="sum-box2-3">
-                    {{dataTh.recovered || 0}}
-                    <label class="sum-box2-4"> +({{dataTh.newRecovered || 0}})</label>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-4 col-sm-4" style="padding: 0.1rem;">
-              <div class="card sum-box2-1" style="background-color: #546C78; border-radius: 10px;">
-                <div class="card-body">
-                  <p class="sum-box2-2">
-                    เสียชีวิต</p>
-                  <p class="sum-box2-3">
-                    {{dataTh.deaths || 0}}
-                    <label class="sum-box2-4"> +({{dataTh.newDeaths || 0}})</label>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <img src="../../../assets/pic/thailand-map.png" alt="" width="90%;">
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-          mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-          euismod.
-          Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-          mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-          euismod.
-          Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-          porta
-          felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-          fermentum
-          massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-    </div>
+        <hr>
 
-    <hr>
-
-  </div> <!-- /container -->
+    </div> <!-- /container -->
 
 </main>
