@@ -11,51 +11,54 @@
       <div class="row">
         <div class="col-md-6">
           <div class="row">
-            <div class="col-md-6 col-12 col-sm-12">
-              <div class="card" style="background-color: #F7518D; border-radius: 10px;">
+            <div class="col-md-6 col-12 col-sm-12" style="padding: 0.1rem;">
+              <div class="card sum-box1-1">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                  <p class="sum-box1-2">
                     ผู้ติดเชื้อ</p>
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                    {{dataTh.confirmed || 0}}</p>
-                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                    +({{dataTh.newConfirmed || 0}})</p>
+                  <p class="sum-box1-3">
+                    {{dataTh.confirmed || 0}}
+                    <span class="sum-box1-4">+({{dataTh.newConfirmed || 0}})</span></p>
+
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-4 col-sm-4">
-              <div class="card" style="background-color: #FFC300; border-radius: 10px;">
+            <div class="col-md-6 col-4 col-sm-4" style="padding: 0.1rem;">
+              <div class="card sum-box2-1" style="background-color: #FFC300; border-radius: 10px;">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                  <p class="sum-box2-2">
                     รักษาในรพ.</p>
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                    {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}</p>
-                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                    +({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</p>
+                  <p class="sum-box2-3">
+                    {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}
+                    <span class="sum-box2-4">+({{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}})</span>
+                  </p>
+
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-4 col-sm-4">
-              <div class="card" style="background-color: #7DD156; border-radius: 10px;">
+            <div class="col-md-6 col-4 col-sm-4" style="padding: 0.1rem;">
+              <div class="card sum-box2-1" style="background-color: #7DD156; border-radius: 10px;">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                  <p class="sum-box2-2">
                     หายแล้ว</p>
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                    {{dataTh.recovered || 0}}</p>
-                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                    +({{dataTh.newRecovered || 0}})</p>
+                  <p class="sum-box2-3">
+                    {{dataTh.recovered || 0}}
+                    <span class="sum-box2-4"> +({{dataTh.newRecovered || 0}})</span>
+                  </p>
+
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-4 col-sm-4">
-              <div class="card" style="background-color: #546C78; border-radius: 10px;">
+            <div class="col-md-6 col-4 col-sm-4" style="padding: 0.1rem;">
+              <div class="card sum-box2-1" style="background-color: #546C78; border-radius: 10px;">
                 <div class="card-body">
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
+                  <p class="sum-box2-2">
                     เสียชีวิต</p>
-                  <p style="text-align: center; font-size: 2em; color: white; font-weight: bold;">
-                    {{dataTh.deaths || 0}}</p>
-                  <p style="text-align: center; font-size: 1em; color: white; font-weight: bold;">
-                    +({{dataTh.newDeaths || 0}})</p>
+                  <p class="sum-box2-3">
+                    {{dataTh.deaths || 0}}
+                    <span class="sum-box2-4"> +({{dataTh.newDeaths || 0}})</span>
+                  </p>
+
                 </div>
               </div>
             </div>
