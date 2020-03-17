@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { PortalRoutingModule } from './portal-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
+import { DirectiveModule } from './directive/directive.module';
 
 
 @NgModule({
   declarations: [LayoutComponent, HomeComponent],
   imports: [
     CommonModule,
-    PortalRoutingModule
+    PortalRoutingModule,
+    DirectiveModule
   ]
 })
 export class PortalModule { }
