@@ -1,4 +1,5 @@
 <main role="main">
+<<<<<<< HEAD
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
 		<div>
@@ -107,3 +108,102 @@
 	</div> <!-- /container -->
 
 </main>
+=======
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12">
+          <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
+            THAILAND</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 col-sm-12 margin-mobile-left-right">
+          <div class="row">
+            <div class="col-md-6 col-12 col-sm-12" style="padding: 0.1rem;">
+              <div class="card sum-box1-1">
+                <div class="card-body">
+                  <span class="sum-box1-2">ผู้ติดเชื้อ</span>
+                  <br>
+                  <span class="sum-box1-3">
+                    {{dataTh.confirmed || 0}}
+                  </span>
+                  <label class="sum-box1-4">&#8593; {{dataTh.newConfirmed || 0}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+              <div class="card sum-box2-1" style="background-color: #FFC300; border-radius: 10px;">
+                <div class="card-body card-mobile">
+                  <span class="sum-box2-2">รักษาในรพ.</span>
+                  <br>
+                  <span class="sum-box2-3">
+                    {{dataTh.confirmed-dataTh.recovered-dataTh.deaths || 0}}
+                  </span>
+                  <label class="sum-box2-4">&#8593; {{dataTh.newConfirmed-dataTh.newRecovered-dataTh.newDeaths || 0}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+              <div class="card sum-box2-1" style="background-color: #7DD156; border-radius: 10px;">
+                <div class="card-body card-mobile">
+                  <span class="sum-box2-2">หายแล้ว</span>
+                  <br>
+                  <span class="sum-box2-3">
+                    {{dataTh.recovered || 0}}
+                  </span>
+                  <label class="sum-box2-4"> &#8593; {{dataTh.newRecovered || 0}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+              <div class="card sum-box2-1" style="background-color: #546C78; border-radius: 10px;">
+                <div class="card-body card-mobile">
+                  <span class="sum-box2-2">เสียชีวิต</span>
+                  <br>
+                  <span class="sum-box2-3">
+                    {{dataTh.deaths || 0}}
+                  </span>
+                  <label class="sum-box2-4"> &#8593; {{dataTh.newDeaths || 0}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="refer">แหล่งที่มา : กรมควบคุมโรค</span>
+        </div>
+        <div class="col-md-5 col-sm-12 margin-mobile-top">
+          <img src="../../../assets/pic/thailand-map.png" alt="" width="90%;">
+        </div>
+        <div class="col-md-2 col-sm-12 margin-mobile-top">
+          <div>
+            <!-- <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                เลือกประเทศ
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">ทั้งหมด</a>
+                                <a class="dropdown-item" href="#">...</a>
+                                <a class="dropdown-item" href="#">ประเทศไทย</a>
+                            </div>
+                        </div> -->
+          </div>
+          <div class="overflow-auto" style="height: 70vh;width: 100%;">
+            <div *ngFor="let i of dataGlobal">
+              <div class="card overflow-hidden">
+                <div class="card-body" style="background-color: rgba(122, 121, 122, 0.1)">
+                  <h5 class="card-title" style="color: crimson;">{{i.country}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">ยืนยันแล้ว : {{i.totalCases}}</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">เสียชีวิต : {{i.totalDeaths}}</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">รักษาหาย : {{i.totalRecovered}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+>>>>>>> 6e1d6227b1dc3a7e5c53657b7131f8c2318dcfd6
