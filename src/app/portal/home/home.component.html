@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-12">
           <span class="update-time">
-            อัปเดตล่าสุด {{dataTh.datetime | datetime}}
+            อัปเดตล่าสุด {{+dataTh.datetime | datetime}}
           </span>
         </div>
       </div>
@@ -35,7 +35,7 @@
                         <div class="box-1 background-pink">
                           <span class="text-box-big">ผู้ติดเชื้อ</span>
                           <div class="number-box-big">
-                            {{dataTh.confirm_total | number:'1.0-0' || 0}}
+                            {{+dataTh.confirm_total | number:'1.0-0' }}
                           </div>
                         </div>
                       </div>
@@ -43,7 +43,7 @@
                         <div class="box-3 background-brown">
                           <span class="text-box">รุนแรง</span>
                           <div class="number-box-small">
-                            {{dataTh.confirm_critical | number:'1.0-0' || 0}}
+                            {{+dataTh.confirm_critical | number:'1.0-0'}
                           </div>
                         </div>
                       </div>
@@ -51,7 +51,7 @@
                         <div class="box-4 background-red">
                           <span class="text-box">เสียชีวิต</span>
                           <div class="number-box-small">
-                            {{dataTh.confirm_critical | number:'1.0-0' || 0}}
+                            {{+dataTh.confirm_critical | number:'1.0-0' }}
                           </div>
                         </div>
                       </div>
@@ -63,7 +63,7 @@
                         <div class="box-2 background-bule">
                           <span class="text-box">รายใหม่</span>
                           <div class="number-box">
-                            {{dataTh.confirm_new | number:'1.0-0' || 0}}
+                            {{+dataTh.confirm_new | number:'1.0-0' }}
                           </div>
                         </div>
                       </div>
@@ -71,7 +71,7 @@
                         <div class="box-5 background-green">
                           <span class="text-box">หายแล้ว</span>
                           <div class="number-box">
-                            {{dataTh.confirm_recover | number:'1.0-0' || 0}}
+                            {{+dataTh.confirm_recover | number:'1.0-0' }}
                           </div>
                         </div>
                       </div>
@@ -87,13 +87,13 @@
                         <span class="text-country">{{i.country}}</span>
                         <br>
                         <span class="color-brown">ยืนยันแล้ว :
-                          {{i.totalCases | number:'1.0-0'}}</span>
+                          {{+i.totalCases | number:'1.0-0'}}</span>
                         <br>
                         <span class="color-pink">เสียชีวิต :
-                          {{i.totalDeaths | number:'1.0-0'}}</span>
+                          {{+i.totalDeaths | number:'1.0-0'}}</span>
                         <br>
                         <span class="color-green">รักษาหาย :
-                          {{i.totalRecovered | number:'1.0-0'}}</span>
+                          {{+i.totalRecovered | number:'1.0-0'}}</span>
                       </div>
                     </div>
                   </div>
@@ -115,7 +115,7 @@
                   สะสม
                 </div>
                 <div class="watch-out-number color-bule">
-                  {{dataTh.observe_total | number:'1.0-0' || 0}}
+                  {{+dataTh.observe_total | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-6 watch-out-text">
@@ -123,7 +123,7 @@
                   รายใหม่
                 </div>
                 <div class="watch-out-number color-bule">
-                  {{dataTh.observe_new | number:'1.0-0' || 0}}
+                  {{+dataTh.observe_new | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-4 watch-out-text">
@@ -131,7 +131,7 @@
                   อยู่รพ.
                 </div>
                 <div class="watch-out-number color-pink">
-                  {{dataTh.observe_hospital | number:'1.0-0' || 0}}
+                  {{+dataTh.observe_hospital | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-4 watch-out-text">
@@ -139,7 +139,7 @@
                   กลับบ้าน
                 </div>
                 <div class="watch-out-number color-pink">
-                  {{dataTh.observe_recover | number:'1.0-0' || 0}}
+                  {{+dataTh.observe_recover | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-4 watch-out-text">
@@ -147,7 +147,7 @@
                   สังเกตอาการ
                 </div>
                 <div class="watch-out-number color-pink">
-                  {{dataTh.observe_ovserve | number:'1.0-0' || 0}}
+                  {{+dataTh.observe_ovserve | number:'1.0-0' }}
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@
                   พบเชื้อ
                 </div>
                 <div class="test-result-number color-red">
-                  {{dataTh.result_positive | number:'1.0-0' || 0}}
+                  {{+dataTh.result_positive | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-4 padding-0 test-result-text">
@@ -174,7 +174,7 @@
                   ไม่พบเชื้อ
                 </div>
                 <div class="test-result-number color-green">
-                  {{dataTh.result_negative | number:'1.0-0' || 0}}
+                  {{+dataTh.result_negative | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-4 padding-0 test-result-text">
@@ -182,7 +182,7 @@
                   รอผล
                 </div>
                 <div class="test-result-number color-brown">
-                  {{dataTh.result_wait | number:'1.0-0' || 0}}
+                  {{+dataTh.result_wait | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-12 padding-0">
@@ -195,7 +195,7 @@
                   สนามบิน
                 </div>
                 <div class="screening-number color-brown">
-                  {{dataTh.traffic_airport | number:'1.0-0' || 0}}
+                  {{+dataTh.traffic_airport | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-3 padding-0 screening-text">
@@ -203,7 +203,7 @@
                   ท่าเรือ
                 </div>
                 <div class="screening-number color-brown">
-                  {{dataTh.traffic_port | number:'1.0-0' || 0}}
+                  {{+dataTh.traffic_port | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-3 padding-0 screening-text">
@@ -211,13 +211,13 @@
                   ด่านพรมแดน
                 </div>
                 <div class="screening-number color-brown">
-                  {{dataTh.traffic_checkpoint | number:'1.0-0' || 0}}
+                  {{+dataTh.traffic_checkpoint | number:'1.0-0' }}
                 </div>
               </div>
               <div class="col-3 padding-0 screening-text">
                 <div>สตม.แจ้งวัฒนะ</div>
                 <div class="screening-number color-brown">
-                  {{dataTh.traffic_immigration_chaengwattana | number:'1.0-0' || 0}}
+                  {{+dataTh.traffic_immigration_chaengwattana | number:'1.0-0' }}
                 </div>
               </div>
             </div>
