@@ -9,6 +9,6 @@ import { DatetimePipe } from './datetime.pipe';
   imports: [
     CommonModule
   ],
-  exports:[DatetimePipe]
+  exports: [DatetimePipe]
 })
 export class PipeModule { }
