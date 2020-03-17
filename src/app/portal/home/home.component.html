@@ -1,94 +1,162 @@
-<div class="bg-dark" style="height: 100vh;">
-    <div class="container">
-        <div>
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-xs-12">
-                    <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
-                        THAILAND
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <span class="update-time">
-                        อัปเดตล่าสุด {{dataTh.datetime | datetime}}
-                    </span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-9">
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="row">
-                                <div class="col-12 padding-0">
-                                    <div class="box-1 background-red">
-                                        <span class="text-box-big">ผู้ติดเชื้อ</span>
-                                        <div class="number-box-big">
-                                            {{dataTh.confirm_total || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 padding-0">
-                                    <div class="box-3 background-brown">
-                                        <span class="text-box">รุนแรง</span>
-                                        <div class="number-box-small">
-                                            {{dataTh.confirm_critical || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 padding-0">
-                                    <div class="box-4 background-pink">
-                                        <span class="text-box">เสียชีวิต</span>
-                                        <div class="number-box-small">
-                                            {{dataTh.confirm_critical || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="col-12 padding-0">
-                                    <div class="box-2 background-bule">
-                                        <span class="text-box">รายใหม่</span>
-                                        <div class="number-box">
-                                            {{dataTh.confirm_new || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 padding-0">
-                                    <div class="box-5 background-green">
-                                        <span class="text-box">หายแล้ว</span>
-                                        <div class="number-box">
-                                            {{dataTh.confirm_recover || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="overflow-auto global">
-                        <div *ngFor="let i of dataGlobal">
-                            <div class="card bg-dark overflow-hidden">
-                                <div class="card-body">
-                                    <span class="text-country">{{i.country}}</span>
-                                    <br>
-                                    <span class="color-brown">ยืนยันแล้ว : {{i.totalCases}}</span>
-                                    <br>
-                                    <span class="color-pink">เสียชีวิต : {{i.totalDeaths}}</span>
-                                    <br>
-                                    <span class="color-green">รักษาหาย : {{i.totalRecovered}}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
+<div class="bg-dark" style="height: auto;">
+    <div class="row margin-0">
+        <div class="col-12">
+            <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
+                THAILAND
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <span class="update-time">
+                    อัปเดตล่าสุด {{dataTh.datetime | datetime}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-interval="100000" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row" style="padding-bottom: 3rem;">
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-12 padding-0">
+                                            <div class="box-1 background-pink">
+                                                <span class="text-box-big">ผู้ติดเชื้อ</span>
+                                                <div class="number-box-big">
+                                                    {{dataTh.confirm_total || 0}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 padding-0">
+                                            <div class="box-3 background-brown">
+                                                <span class="text-box">รุนแรง</span>
+                                                <div class="number-box-small">
+                                                    {{dataTh.confirm_critical || 0}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 padding-0">
+                                            <div class="box-4 background-red">
+                                                <span class="text-box">เสียชีวิต</span>
+                                                <div class="number-box-small">
+                                                    {{dataTh.confirm_critical || 0}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row">
+                                        <div class="col-12 padding-0">
+                                            <div class="box-2 background-bule">
+                                                <span class="text-box">รายใหม่</span>
+                                                <div class="number-box">
+                                                    {{dataTh.confirm_new || 0}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 padding-0">
+                                            <div class="box-5 background-green">
+                                                <span class="text-box">หายแล้ว</span>
+                                                <div class="number-box">
+                                                    {{dataTh.confirm_recover || 0}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="overflow-auto global">
+                                <div *ngFor="let i of dataGlobal">
+                                    <div class="card bg-dark overflow-hidden">
+                                        <div class="card-body">
+                                            <span class="text-country">{{i.country}}</span>
+                                            <br>
+                                            <span class="color-brown">ยืนยันแล้ว : {{i.totalCases}}</span>
+                                            <br>
+                                            <span class="color-pink">เสียชีวิต : {{i.totalDeaths}}</span>
+                                            <br>
+                                            <span class="color-green">รักษาหาย : {{i.totalRecovered}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row" style="padding-bottom: 3.6rem;">
+                        <div class="col-12 topic-text">
+                            <div>
+                                เข้าเกณฑ์เฝ้าระวัง(คน)
+                            </div>
+                        </div>
+                        <div class="col-6 watch-out-text">
+                            <div>
+                                สะสม
+                            </div>
+                            <div class="watch-out-number color-bule">
+                                {{dataTh.observe_total || 0}}
+                            </div>
+                        </div>
+                        <div class="col-6 watch-out-text">
+                            <div>
+                                รายใหม่
+                            </div>
+                            <div class="watch-out-number color-bule">
+                                {{dataTh.observe_new || 0}}
+                            </div>
+                        </div>
+                        <div class="col-4 watch-out-text">
+                            <div>
+                                อยู่รพ.
+                            </div>
+                            <div class="watch-out-number color-pink">
+                                {{dataTh.observe_hospital || 0}}
+                            </div>
+                        </div>
+                        <div class="col-4 watch-out-text">
+                            <div>
+                                กลับบ้าน
+                            </div>
+                            <div class="watch-out-number color-pink">
+                                {{dataTh.observe_recover || 0}}
+                            </div>
+                        </div>
+                        <div class="col-4 watch-out-text">
+                            <div>
+                                สังเกตอาการ
+                            </div>
+                            <div class="watch-out-number color-pink">
+                                {{dataTh.observe_ovserve || 0}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" style="width: 10%;" href="#carouselExampleIndicators" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" style="width: 10%;" href="#carouselExampleIndicators" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
