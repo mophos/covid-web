@@ -1,3 +1,4 @@
+import { PipeModule } from './../pipe/pipe.module';
 import { ApiService } from './service/api.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,7 +13,8 @@ import { DirectiveModule } from './directive/directive.module';
   declarations: [LayoutComponent, HomeComponent],
   imports: [
     CommonModule,
-    PortalRoutingModule
+    PortalRoutingModule,
+    PipeModule
   ],
   providers: [
     ApiService
