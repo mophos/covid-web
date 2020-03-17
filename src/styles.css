@@ -8,12 +8,12 @@
     text-shadow: 3px 3px 4px rgba(0, 0, 0, .5);
     text-align: center;
     font-weight: bold;
-    font-size: 5vw;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    margin: 0.5rem;
     font-family: 'Kanit';
 }
 
-.update-time{
+.update-time {
     font-family: 'Kanit';
     color: white;
     font-weight: 100;
@@ -68,8 +68,8 @@
     font-weight: bold;
 }
 
-.global{
-    height:32rem;
+.global {
+    height: 32rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -109,85 +109,109 @@
     border-radius: 0.5rem;
 }
 
-.padding-0{
+.padding-0 {
     padding: 0px;
 }
 
-.text-box-big{
+.margin-0 {
+    margin: 0px;
+}
+
+.text-box-big {
     color: white;
     font-size: 3rem;
     font-family: 'Kanit';
 }
 
-.text-box{
+.text-box {
     color: white;
     font-size: 3rem;
     font-family: 'Kanit';
 }
 
-.number-box-big{
+.number-box-big {
     color: white;
     font-size: 9rem;
     font-family: 'Kanit';
     text-align: center;
 }
 
-.number-box{
+.number-box {
     color: white;
     font-size: 6rem;
     font-family: 'Kanit';
     text-align: center;
 }
 
-.number-box-small{
+.number-box-small {
     color: white;
     font-size: 4rem;
     font-family: 'Kanit';
     text-align: center;
 }
 
-.color-red{
+.color-red {
     color: rgb(216, 30, 37);
 }
 
-.color-pink{
+.color-pink {
     color: rgb(232, 87, 103);
 }
 
-.color-brown{
+.color-brown {
     color: rgb(230, 161, 74);
-    
 }
 
-.color-green{
+.color-green {
     color: rgb(156, 182, 44);
 }
 
-.color-bule{
+.color-bule {
     color: rgb(59, 151, 144);
-
 }
 
-.background-red{
+.background-red {
     background: rgb(216, 30, 37);
 }
 
-.background-pink{
+.background-pink {
     background: rgb(232, 87, 103);
 }
 
-.background-brown{
+.background-brown {
     background: rgb(230, 161, 74);
-    
 }
 
-.background-green{
+.background-green {
     background: rgb(156, 182, 44);
 }
 
-.background-bule{
+.background-bule {
     background: rgb(59, 151, 144);
+}
 
+.topic-text {
+    color: black;
+    font-size: 4rem;
+    font-family: 'Kanit';
+    text-align: center;
+    background-color: white;
+    border: 1px white double;
+    padding: 1.75rem;
+}
+
+.watch-out-text{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Kanit';
+    text-align: center;
+    border: 1px white double;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.watch-out-number{
+    font-size: 4.5rem;
+    font-family: 'Kanit';
 }
 
 .text-new-head{
