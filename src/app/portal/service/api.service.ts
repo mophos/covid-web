@@ -18,6 +18,12 @@ export class ApiService {
     return rs;
   }
 
+  async getPr() {
+    const url = `${this.url}/pr`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+
   async getSummaryGlobal() {
     const url = `${this.url}/summary/global`;
     const rs: any = await this.http.get(url).toPromise();

@@ -1,94 +1,179 @@
 <div class="bg-dark" style="height: 100vh;">
-    <div class="container">
-        <div>
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-xs-12">
-                    <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
-                        THAILAND
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <span class="update-time">
-                        อัปเดตล่าสุด {{dataTh.datetime | datetime}}
-                    </span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-9">
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="row">
-                                <div class="col-12 padding-0">
-                                    <div class="box-1 background-red">
-                                        <span class="text-box-big">ผู้ติดเชื้อ</span>
-                                        <div class="number-box-big">
-                                            {{dataTh.confirm_total || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 padding-0">
-                                    <div class="box-3 background-brown">
-                                        <span class="text-box">รุนแรง</span>
-                                        <div class="number-box-small">
-                                            {{dataTh.confirm_critical || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 padding-0">
-                                    <div class="box-4 background-pink">
-                                        <span class="text-box">เสียชีวิต</span>
-                                        <div class="number-box-small">
-                                            {{dataTh.confirm_critical || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="col-12 padding-0">
-                                    <div class="box-2 background-bule">
-                                        <span class="text-box">รายใหม่</span>
-                                        <div class="number-box">
-                                            {{dataTh.confirm_new || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 padding-0">
-                                    <div class="box-5 background-green">
-                                        <span class="text-box">หายแล้ว</span>
-                                        <div class="number-box">
-                                            {{dataTh.confirm_recover || 0}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="overflow-auto global">
-                        <div *ngFor="let i of dataGlobal">
-                            <div class="card bg-dark overflow-hidden">
-                                <div class="card-body">
-                                    <span class="text-country">{{i.country}}</span>
-                                    <br>
-                                    <span class="color-brown">ยืนยันแล้ว : {{i.totalCases}}</span>
-                                    <br>
-                                    <span class="color-pink">เสียชีวิต : {{i.totalDeaths}}</span>
-                                    <br>
-                                    <span class="color-green">รักษาหาย : {{i.totalRecovered}}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-            </div>
+  <div class="container">
+    <div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12">
+          <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
+            THAILAND
+          </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <span class="update-time">
+            อัปเดตล่าสุด {{dataTh.datetime | datetime}}
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <div class="row">
+            <div class="col-8">
+              <div class="row">
+                <div class="col-12 padding-0">
+                  <div class="box-1 background-red">
+                    <span class="text-box-big">ผู้ติดเชื้อ</span>
+                    <div class="number-box-big">
+                      {{dataTh.confirm_total || 0}}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 padding-0">
+                  <div class="box-3 background-brown">
+                    <span class="text-box">รุนแรง</span>
+                    <div class="number-box-small">
+                      {{dataTh.confirm_critical || 0}}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 padding-0">
+                  <div class="box-4 background-pink">
+                    <span class="text-box">เสียชีวิต</span>
+                    <div class="number-box-small">
+                      {{dataTh.confirm_critical || 0}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="row">
+                <div class="col-12 padding-0">
+                  <div class="box-2 background-bule">
+                    <span class="text-box">รายใหม่</span>
+                    <div class="number-box">
+                      {{dataTh.confirm_new || 0}}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 padding-0">
+                  <div class="box-5 background-green">
+                    <span class="text-box">หายแล้ว</span>
+                    <div class="number-box">
+                      {{dataTh.confirm_recover || 0}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="overflow-auto global">
+            <div *ngFor="let i of dataGlobal">
+              <div class="card bg-dark overflow-hidden">
+                <div class="card-body">
+                  <span class="text-country">{{i.country}}</span>
+                  <br>
+                  <span class="color-brown">ยืนยันแล้ว : {{i.totalCases}}</span>
+                  <br>
+                  <span class="color-pink">เสียชีวิต : {{i.totalDeaths}}</span>
+                  <br>
+                  <span class="color-green">รักษาหาย : {{i.totalRecovered}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+      </div>
     </div>
+  </div>
+</div>
+<div style="height: 100vh;background-color: blue;">
+  <div class="container" style="padding-top: 3rem;">
+    <div class="row">
+      <div class="col-4">
+        <div *ngFor="let i of pr;">
+          <div class="row" *ngIf="i.enclosure.url.length && i.title.length" style="margin: 0.4rem;height:5rem;background-color: yellow;">
+            <div class="col-4" style="padding: 0rem;">
+              <img [src]="i.enclosure.url" style="width: 100%;">
+            </div>
+            <div class="col-8">
+              <div  class="text-new-head" [innerHTML]="i.title" *ngIf="i.title.length" style="text-overflow: ellipsis;"> </div>
+              <br>
+              <div for="" class="text-new-detail" [innerHTML]="i.description" *ngIf="i.description.length" style="text-overflow: ellipsis;">
+                <!-- {{i.description || ''}} -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          </ol>
+          <div #citem class="carousel-inner" style="height: 470px;width:80%;margin-left:10%">
+
+            <div class="carousel-item" *ngFor="let i of info; let isFirst = first" [ngClass]="{active:isFirst}">
+            <a href="https://www3.dmsc.moph.go.th/images/map_sars_cov_2.jpg" target="_blank">
+              <img [src]="i.url" class="d-block w-100" alt="...">
+            </a>
+          </div>
+        </div>
+        <br><br>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container" style="margin-top: 3rem;">
+  <div class="row">
+    <div class="col-12">
+      <h5 style="color: green;text-align: center;">
+        <img src="https://ddc.moph.go.th/viralpneumonia/img/p1.jpg" alt="" style="width:100%">
+      </h5>
+      <h5 style="color: red;text-align: center;">
+        <b>หลีกเลี่ยงการเดินทางที่ไม่จำเป็น</b>
+      </h5>
+      <div style="text-align: justify;">
+        <h6 style="color: blue;"><b>ประเด็นสำคัญ</b></h6>
+        <div style="text-align: justify;">
+          <p>• ขณะนี้มีการระบาดของโรคติดเชื้อไวรัสโคโรนา 2019 (COVID-19) มีการระบาดใหญ่ (Pandemic) ไปทั่วโลก
+            (ตามประกาศขององค์การอนามัยโลก, 11 มีนาคม 2563)
+            ขอให้ประชาชนและผู้ที่จะเดินทางไปต่างประเทศติดตามสถานการณ์อย่างใกล้ชิด รวมทั้งให้ความร่วมมือ
+            และปฏิบัติตามคำแนะนำต่างๆ เพื่อความปลอดภัยทั้งของตนเองและผู้อื่น
+            รวมทั้งลดผลกระทบในด้านเศรษฐกิจและสังคม</p>
+          <p>• <b>ผู้เดินทางมาจากเขตติดโรคติดต่ออันตราย</b>เดินทางเข้าประเทศไทย
+            ต้องแสดงใบรับรองแพทย์ตามเงื่อนไขที่กำหนด และหลักฐานการทำประกันสุขภาพ
+            ให้กับสายการบินก่อนการเช็คอินที่สนามบินต้นทาง
+            <a target="_blank"
+              href="https://ddc.moph.go.th/viralpneumonia/ind_danger.php">&nbsp;<b>อ่านเพิ่มเติม</b></a></p>
+          <p>• <b>ผู้เดินทางมาจากพื้นที่มีการระบาดต่อเนื่อง</b>เข้าประเทศไทย จะถูกคุมไว้สังเกตอาการภายในที่พักอาศัย 14
+            วัน
+            <a target="_blank"
+              href="https://ddc.moph.go.th/viralpneumonia/ind_outbreak.php">&nbsp;<b>อ่านเพิ่มเติม</b></a></p>
+          <p>• <b>ผู้เดินทางมาจากพื้นที่อื่น</b> ให้ดูแลสุขภาพ สุขอนามัย และป้องกันตนเอง
+            พร้อมทั้งหลีกเลี่ยงสถานที่แออัด
+            <a target="_blank"
+              href="https://ddc.moph.go.th/viralpneumonia/ind_others.php">&nbsp;<b>อ่านเพิ่มเติม</b></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

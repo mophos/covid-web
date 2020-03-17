@@ -11,14 +11,21 @@ export class HomeComponent implements OnInit {
   dataTh: any = {};
   dataGlobal: any = [];
   country: any = [];
+  pr = [];
+  info: any = [
+    { url: 'https://www3.dmsc.moph.go.th/images/map_sars_cov_2.jpg' },
+    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info17.jpg' },
+    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info16.jpg' },
+    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info14.jpg' }];
 
   constructor(
     private apiService: ApiService
   ) { }
 
   async ngOnInit() {
-    await this.getSummaryTH();
-    await this.getSummaryGlobal();
+    this.getSummaryTH();
+    this.getSummaryGlobal();
+    this.getPr();
 
   }
 
@@ -38,6 +45,17 @@ export class HomeComponent implements OnInit {
       const rs: any = await this.apiService.getSummaryGlobal();
       if (rs.ok) {
         this.dataGlobal = rs.rows;
+      }
+    } catch (error) {
+
+    }
+  }
+
+  async getPr() {
+    try {
+      const rs: any = await this.apiService.getPr();
+      if (rs.ok) {
+        this.pr = rs.rows;
       }
     } catch (error) {
 

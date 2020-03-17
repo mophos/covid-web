@@ -189,3 +189,16 @@
     background: rgb(59, 151, 144);
 
 }
+
+.text-new-head{
+    font-size: 0.85rem;
+    font-family: 'Kanit';
+    height:3rem;
+}
+
+.text-new-detail{
+    font-size: 0.7rem;
+    font-family: 'Kanit';
+    height:2rem;
+    
+}
