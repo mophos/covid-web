@@ -1,3 +1,4 @@
+import { PipeModule } from './pipe/pipe.module';
 import { environment } from './../environments/environment';
 import { PortalModule } from './portal/portal.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     PortalModule,
-    HttpClientModule
+    HttpClientModule,
+    PipeModule
   ],
   providers: [
     { provide: 'API_URL', useValue: environment.apiUrl },
