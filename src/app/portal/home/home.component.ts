@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  config: any;
+  fullpageApi: any;
+
   dataTh: any = {};
   dataGlobal: any = [];
   country: any = [];
@@ -20,7 +23,14 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private apiService: ApiService
-  ) { }
+  ) {
+    this.config = {
+      licenseKey: 'YOUR LICENSE KEY HERE',
+      // sectionsColor: ['#7BAABE', 'whitesmoke', '#7BAABE', 'whitesmoke', '#7BAABE'],
+      anchors: ['p1', 'p2', 'p3'],
+      navigation: false,
+    };
+  }
 
   async ngOnInit() {
     this.getSummaryTH();
@@ -60,6 +70,10 @@ export class HomeComponent implements OnInit {
     } catch (error) {
 
     }
+  }
+
+  getRef(fullPageRef) {
+    this.fullpageApi = fullPageRef;
   }
 
   // async setCountry() {

@@ -21,7 +21,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
   ],
   providers: [
     { provide: 'API_URL', useValue: environment.apiUrl },
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    // { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
