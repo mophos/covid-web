@@ -8,17 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  config: any;
+  fullpageApi: any;
+
   dataTh: any = {};
   dataGlobal: any = [];
   country: any = [];
+  pr = [];
+  info: any = [
+    { url: 'https://www3.dmsc.moph.go.th/images/map_sars_cov_2.jpg' },
+    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info17.jpg' },
+    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info16.jpg' },
+    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info14.jpg' }];
 
   constructor(
     private apiService: ApiService
-  ) { }
+  ) {
+    this.config = {
+      licenseKey: 'YOUR LICENSE KEY HERE',
+      // sectionsColor: ['#7BAABE', 'whitesmoke', '#7BAABE', 'whitesmoke', '#7BAABE'],
+      anchors: ['p1', 'p2', 'p3'],
+      navigation: false,
+    };
+  }
 
   async ngOnInit() {
-    await this.getSummaryTH();
-    await this.getSummaryGlobal();
+    this.getSummaryTH();
+    this.getSummaryGlobal();
+    this.getPr();
 
   }
 
@@ -42,6 +59,21 @@ export class HomeComponent implements OnInit {
     } catch (error) {
 
     }
+  }
+
+  async getPr() {
+    try {
+      const rs: any = await this.apiService.getPr();
+      if (rs.ok) {
+        this.pr = rs.rows;
+      }
+    } catch (error) {
+
+    }
+  }
+
+  getRef(fullPageRef) {
+    this.fullpageApi = fullPageRef;
   }
 
   // async setCountry() {
