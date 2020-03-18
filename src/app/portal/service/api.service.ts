@@ -35,4 +35,10 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+
+  async getVisit() {
+    const url = `${this.url}/visit`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 }

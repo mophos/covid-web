@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from './../service/api.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  visit: any
+  constructor(
+    private apiService: ApiService
+  ) { }
 
   ngOnInit() {
+    this.getVisit();
+  }
+
+  async getVisit() {
+    try {
+      const rs: any = await this.apiService.getVisit();
+      if (rs.ok) {
+        this.visit = rs.rows.count;
+      }
+    } catch (error) {
+
+    }
   }
 
 }
