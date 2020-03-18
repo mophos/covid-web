@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-12">
           <span class="update-time">
-            อัปเดตล่าสุด {{+dataTh.datetime | datetime}}
+            อัปเดตล่าสุด {{dataTh.datetime | datetime}}
           </span>
           <span class="update-time" style="float: right;">
             แหล่งที่มา : กรมควบคุมโรค
@@ -46,7 +46,7 @@
                         <div class="box-3 background-brown">
                           <span class="text-box">รุนแรง</span>
                           <div class="number-box-small">
-                            {{+dataTh.confirm_critical | number:'1.0-0'}
+                            {{+dataTh.confirm_critical | number:'1.0-0'}}
                           </div>
                         </div>
                       </div>
