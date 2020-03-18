@@ -13,6 +13,10 @@
     font-family: 'Kanit';
 }
 
+.font-Kanit{
+    font-family: 'Kanit';
+}
+
 .update-time {
     font-family: 'Kanit';
     color: white;
@@ -190,6 +194,22 @@
     background: rgb(59, 151, 144);
 }
 
+.background-base-1{
+    background:#313960;
+}
+.background-base-2{
+    background:#5F5C87;
+}
+.background-base-3{
+    background:#262C50;
+}
+.background-base-4{
+    background:#17c796;
+}
+.background-base-5{
+    background:#D64349;
+}
+
 .topic-text {
     color: black;
     font-size: 4rem;
@@ -234,7 +254,7 @@
 }
 
 .screening-number {
-    font-size: 4rem;
+    font-size: 2rem;
     font-family: 'Kanit';
     text-align: center;
     padding: 0rem;
