@@ -14,6 +14,9 @@
           <span class="update-time">
             อัปเดตล่าสุด {{dataTh.datetime | datetime}}
           </span>
+          <span class="update-time" style="float: right;">
+            แหล่งที่มา : กรมควบคุมโรค
+          </span>
         </div>
       </div>
     </div>
@@ -128,7 +131,7 @@
               </div>
               <div class="col-4 watch-out-text">
                 <div>
-                  อยู่รพ.
+                  เฝ้าระวังที่รพ.
                 </div>
                 <div class="watch-out-number color-pink">
                   {{+dataTh.observe_hospital | number:'1.0-0' }}
@@ -136,7 +139,7 @@
               </div>
               <div class="col-4 watch-out-text">
                 <div>
-                  กลับบ้าน
+                  เฝ้าระวังที่บ้าน
                 </div>
                 <div class="watch-out-number color-pink">
                   {{+dataTh.observe_recover | number:'1.0-0' }}
