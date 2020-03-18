@@ -33,10 +33,15 @@ export class HomeComponent implements OnInit {
   }
 
   async ngOnInit() {
+    this.addVisit();
     this.getSummaryTH();
     this.getSummaryGlobal();
     this.getPr();
 
+  }
+
+  async addVisit() {
+    await this.apiService.addVisit();
   }
 
   async getSummaryTH() {
