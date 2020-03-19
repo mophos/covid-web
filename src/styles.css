@@ -3,20 +3,6 @@
     src: url(./assets/font/Kanit-Regular.ttf);
 }
 
-i {
-    border: solid white;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 0.25rem;
-    position: relative;
-    right: 7px;
-  }
-
-  .up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-  }
-
 .list-1 {
     height: auto;
     padding: 1rem 0rem 3em 0rem;
@@ -27,6 +13,26 @@ i {
     height: auto;
     padding: 3rem 1rem 3em 1rem;
     background-color: rgb(255, 255, 255);
+}
+
+.list-3-text {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Kanit';
+    text-align: center;
+    background-color: #262C50;
+    border: 1px #262C50 double;
+    padding: 0.5rem;
+}
+
+.list-3-test-sub {
+    font-size: 2rem;
+}
+
+.icon-box {}
+
+.confirm-new {
+    font-size: 2rem;
 }
 
 .moph {
@@ -122,6 +128,7 @@ i {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
+    text-align: center;
 }
 
 .box-3 {
@@ -129,6 +136,7 @@ i {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
+    text-align: center;
 }
 
 .box-4 {
@@ -136,6 +144,7 @@ i {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
+    text-align: center;
 }
 
 .box-5 {
@@ -143,6 +152,7 @@ i {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
+    text-align: center;
 }
 
 .padding-0 {
@@ -349,6 +359,23 @@ i {
     background-size: cover;
 }
 
+.visit {
+    text-align: right;
+}
+
+.img-slie {
+    height: 35rem;
+}
+
+.news {
+    height: 35rem;
+    padding: 3rem 1rem 0em 1rem;
+}
+
+.news-text {
+    text-overflow: ellipsis;
+}
+
 @media screen and (max-width: 1200px) and (min-width: 600px) {}
 
 @media screen and (max-width: 599px) {
@@ -357,18 +384,21 @@ i {
         margin: 0.5rem 1rem 0.5rem 1rem;
     }
     .box-2 {
-        height: 4rem;
+        height: 5rem;
     }
     .box-3 {
-        height: 4rem;
+        height: 5rem;
         margin: 0.5rem 0.5rem 0.5rem 1rem;
     }
     .box-4 {
-        height: 4rem;
+        height: 5rem;
     }
     .box-5 {
-        height: 4rem;
+        height: 5rem;
         margin: 0.5rem 1rem 0.5rem 0.5rem;
+    }
+    .confirm-new {
+        font-size: 1.5rem;
     }
     .text-box-big {
         font-size: 3rem;
@@ -380,7 +410,7 @@ i {
         font-size: 4rem;
     }
     .number-box {
-        font-size: 1em;
+        font-size: 1.5em;
     }
     .watch-out-topic {
         font-size: 1em;
@@ -428,11 +458,37 @@ i {
         height: 20rem;
         margin: 0rem
     }
-    .global-text{
+    .global-text {
         text-align: left;
         font-size: 0.75rem;
     }
     .update-time {
         font-size: 0.75rem;
+    }
+    .icon-box {
+        display: none !important;
+    }
+    .visit {
+        padding: 1rem 0rem 1rem 0rem;
+        text-align: center;
+    }
+    .img-slie {
+        height: 10rem;
+    }
+    .list-3-text {
+        font-size: 1rem;
+    }
+    .list-3-test-sub {
+        font-size: 1rem;
+    }
+    .news {
+        height: 19rem;
+        padding: 3rem 1rem 0em 1rem;
+        overflow: auto !important;
+    }
+    .news-text {
+        height:4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
