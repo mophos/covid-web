@@ -41,7 +41,11 @@ export class HomeComponent implements OnInit {
   }
 
   async addVisit() {
-    await this.apiService.addVisit();
+    try {
+      await this.apiService.addVisit();
+    } catch (error) {
+
+    }
   }
 
   async getSummaryTH() {
