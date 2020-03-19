@@ -1,22 +1,41 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkgreen;color: white;">
-  <div class="container">
-    <img src="../../../assets/pic/moph.png" alt="" class="moph">
-    <a class="navbar-brand text-light" href="#">กระทรวงสาธารณสุข</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="color: white;"></span>
-    </button>
 
-    <div class="collapse navbar-collapse container" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link text-light" href="#">หน้าหลัก
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-lg background-base-3 font-Kanit">
+  <div class="moph">
+    <img src="../../../assets/pic/logo-big.png" class="moph-img" alt="">
   </div>
-</nav> -->
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="color: white;"></span>
+  </button> -->
+
+  <!-- <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="#">หน้าหลัก
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+    </ul>
+  </div> -->
+</nav>
+
 
 <router-outlet></router-outlet>
+
+<div class="background-base-3 font-Kanit" style="height: auto;padding: 2rem 0rem 2em 0rem;color: white;">
+  <div class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 text-left">
+          <div class="mb-0">© covid19.moph.go.th 2020</div>
+        </div>
+        <div class="col-2 text-center">
+          view: {{visit}}
+        </div>
+        <div class="col-7 text-right">
+          <div class="mb-0">ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร สำนักงานปลัดกระทรวงสาธารณสุข</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
