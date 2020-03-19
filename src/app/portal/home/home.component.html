@@ -203,11 +203,11 @@
     <div class="row">
       <div class="col-md-12 col-lg-4 news">
         <div *ngFor="let i of pr;let idx = index">
-          <div class="row" *ngIf="(i.enclosure.url.length && i.title.length)&& idx <=6"
+          <div class="row" *ngIf="(i.img&& i.title.length)&& idx <=6"
             style="margin: 0.5rem;height:5rem;border-bottom:2px white solid;">
             <div class=" col-4 padding-0">
               <a [href]="i.link" target="_blank">
-                <img [src]="i.enclosure.url" style="width: 100%;">
+                <img [src]="i.img style="width: 100%;">
               </a>
             </div>
             <div class="col-8 news-text">
