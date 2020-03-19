@@ -1,21 +1,14 @@
 <div class="background-base-2">
   <div class="world">
-    <div style="height: auto;padding: 2rem 0rem 3em 0rem; background-color: rgba(118, 118, 165, 0.5);">
+    <div class="list-1">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 text-left">
-            <div class="update-time">
-              อัปเดตล่าสุด : {{dataTh.datetime | datetime}}
+          <div class="col-md-12 col-lg-9" style="text-shadow: 3px 3px 4px rgba(0, 0, 0, .5);">
+            <div class="text-left">
+              <div class="update-time">
+                อัปเดตล่าสุด : {{dataTh.datetime | datetime}}
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 text-right">
-            <div class="update-time">
-              Global
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-9" style="text-shadow: 3px 3px 4px rgba(0, 0, 0, .5);">
             <div class="row">
               <div class="col-12">
                 <div class="row">
@@ -33,7 +26,7 @@
                   <div class="col-4 padding-0">
                     <div class="box-3 background-base-3">
                       <span class="text-box">รุนแรง</span>
-                      <div class="number-box-small">
+                      <div class="number-box">
                         {{+dataTh.confirm_critical | number:'1.0-0'}}
                       </div>
                     </div>
@@ -41,8 +34,8 @@
                   <div class="col-4 padding-0">
                     <div class="box-4 background-base-5">
                       <span class="text-box">เสียชีวิต</span>
-                      <div class="number-box-small">
-                        {{+dataTh.confirm_critical | number:'1.0-0' }}
+                      <div class="number-box">
+                        {{+dataTh.confirm_dead | number:'1.0-0' }}
                       </div>
                     </div>
                   </div>
@@ -58,7 +51,12 @@
               </div>
             </div>
           </div>
-          <div class="col-3 padding-0">
+          <div class="col-md-12 col-lg-3">
+            <div class="text-right">
+              <div class="global-text">
+                Global
+              </div>
+            </div>
             <div class="overflow-auto global">
               <div *ngFor="let i of dataGlobal">
                 <div class="card background-base-3 overflow-hidden">
@@ -81,10 +79,10 @@
         </div>
       </div>
     </div>
-    <div style="height: auto;padding: 3rem 0rem 3em 0rem; background-color: rgb(255, 255, 255);">
+    <div class="list-2">
       <div class="container">
         <div class="row">
-          <div class="col-12 topic-text">
+          <div class="col-12 watch-out-topic">
             <div>
               เข้าเกณฑ์เฝ้าระวัง(คน)
             </div>
@@ -163,7 +161,7 @@
               ผู้เดินทางที่คัดกรองสะสม(คน)
             </div>
           </div>
-          <div class="col-3 padding-0 screening-text">
+          <div class="col-md-6 col-lg-3 padding-0 screening-text">
             <div>
               สนามบิน
             </div>
@@ -171,7 +169,7 @@
               {{+dataTh.traffic_airport | number:'1.0-0' }}
             </div>
           </div>
-          <div class="col-3 padding-0 screening-text">
+          <div class="col-md-6 col-lg-3 padding-0 screening-text">
             <div>
               ท่าเรือ
             </div>
@@ -179,7 +177,7 @@
               {{+dataTh.traffic_port | number:'1.0-0' }}
             </div>
           </div>
-          <div class="col-3 padding-0 screening-text">
+          <div class="col-md-6 col-lg-3 padding-0 screening-text">
             <div>
               ด่านพรมแดน
             </div>
@@ -187,7 +185,7 @@
               {{+dataTh.traffic_checkpoint | number:'1.0-0' }}
             </div>
           </div>
-          <div class="col-3 padding-0 screening-text">
+          <div class="col-md-6 col-lg-3 padding-0 screening-text">
             <div>สตม.แจ้งวัฒนะ</div>
             <div class="screening-number color-brown">
               {{+dataTh.traffic_immigration_chaengwattana | number:'1.0-0' }}
