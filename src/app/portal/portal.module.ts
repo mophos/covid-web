@@ -6,13 +6,15 @@ import { CommonModule } from '@angular/common';
 import { PortalRoutingModule } from './portal-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 @NgModule({
   declarations: [LayoutComponent, HomeComponent],
   imports: [
     CommonModule,
     PortalRoutingModule,
-    PipeModule
+    PipeModule,
+    DeviceDetectorModule.forRoot()
   ],
   providers: [
     ApiService

@@ -36,9 +36,9 @@ export class ApiService {
     return rs;
   }
 
-  async addVisit() {
+  async addVisit(device) {
     const url = `${this.url}/add-visit`;
-    const rs: any = await this.http.get(url).toPromise();
+    const rs: any = await this.http.post(url, { device }).toPromise();
     return rs;
   }
 

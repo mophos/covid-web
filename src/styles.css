@@ -66,11 +66,13 @@
     color: white;
 }
 
+
 /* width */
 
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 
 /* Track */
 
@@ -78,11 +80,13 @@
     background: #394063;
 }
 
+
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
     background: #262C50;
 }
+
 
 /* Handle on hover */
 
@@ -404,6 +408,18 @@
 
 .underline {
     text-decoration-line: underline;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 600px) {
