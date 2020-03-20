@@ -1,6 +1,6 @@
 import { ApiService } from './../service/api.service';
 import { Component, OnInit } from '@angular/core';
-
+const publicIp = require('public-ip');
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -41,7 +41,8 @@ export class HomeComponent implements OnInit {
 
   async addVisit() {
     try {
-      await this.apiService.addVisit();
+      const ipv4 = await publicIp.v4();
+      await this.apiService.addVisit(ipv4 || null);
     } catch (error) {
 
     }

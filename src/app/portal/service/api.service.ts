@@ -36,8 +36,8 @@ export class ApiService {
     return rs;
   }
 
-  async addVisit() {
-    const url = `${this.url}/add-visit`;
+  async addVisit(ip) {
+    const url = `${this.url}/add-visit?ip=${ip}`;
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
