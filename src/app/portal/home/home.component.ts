@@ -1,6 +1,7 @@
 import { ApiService } from './../service/api.service';
 import { Component, OnInit } from '@angular/core';
-const publicIp = require('public-ip');
+import * as publicIp from 'public-ip';
+import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -19,7 +20,8 @@ export class HomeComponent implements OnInit {
   news: any = [];
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
+    private deviceService: DeviceDetectorService
   ) {
     this.config = {
       licenseKey: 'YOUR LICENSE KEY HERE',
@@ -41,8 +43,23 @@ export class HomeComponent implements OnInit {
 
   async addVisit() {
     try {
-      const ipv4 = await publicIp.v4();
-      await this.apiService.addVisit(ipv4 || null);
+      const deviceInfo: any = this.deviceService.getDeviceInfo();
+      const isMobile = this.deviceService.isMobile();
+      const isTablet = this.deviceService.isTablet();
+      const isDesktopDevice = this.deviceService.isDesktop();
+      const device = {
+        is_mobile: isMobile,
+        is_tablet: isTablet,
+        is_desktop: isDesktopDevice,
+        public_ip: await publicIp.v4(),
+        browser: deviceInfo.browser,
+        browser_version: deviceInfo.browser_version,
+        host: location.host,
+        os: deviceInfo.os,
+        os_version: deviceInfo.os_version,
+        user_agent: deviceInfo.userAgent
+      };
+      await this.apiService.addVisit(device);
     } catch (error) {
 
     }
