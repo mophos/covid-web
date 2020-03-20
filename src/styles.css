@@ -29,10 +29,9 @@
     font-size: 2rem;
 }
 
-.icon-box {}
-
 .confirm-new {
-    font-size: 2rem;
+    color: red;
+    font-size: 3.5rem;
 }
 
 .moph {
@@ -67,11 +66,13 @@
     color: white;
 }
 
+
 /* width */
 
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 
 /* Track */
 
@@ -79,11 +80,13 @@
     background: #394063;
 }
 
+
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
     background: #262C50;
 }
+
 
 /* Handle on hover */
 
@@ -369,11 +372,54 @@
 
 .news {
     height: 35rem;
-    padding: 3rem 1rem 0em 1rem;
+    padding: 0rem 1rem 0em 1rem;
+    margin-top: 3rem;
+    overflow: auto !important;
 }
 
 .news-text {
     text-overflow: ellipsis;
+}
+
+.news-topic {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: rgb(238, 165, 106);
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, .5);
+    margin: 0rem;
+}
+
+.news-date {
+    text-align: right;
+    padding: 1em 0.5rem 0rem 0.5rem;
+    font-size: 0.5rem;
+    color: #17c796;
+}
+
+.news-detail {
+    padding: 0.5rem;
+    /* color: rgb(238, 165, 106); */
+    /* background-color:rgb(232, 152, 87) ; */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 600px) {}
@@ -487,7 +533,7 @@
         overflow: auto !important;
     }
     .news-text {
-        height:4rem;
+        height: 4rem;
         overflow: hidden;
         text-overflow: ellipsis;
     }

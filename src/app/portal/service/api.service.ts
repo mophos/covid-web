@@ -24,6 +24,12 @@ export class ApiService {
     return rs;
   }
 
+  async getInfographic() {
+    const url = `${this.url}/infographic`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+
   async getSummaryGlobal() {
     const url = `${this.url}/summary/global`;
     const rs: any = await this.http.get(url).toPromise();
@@ -38,6 +44,12 @@ export class ApiService {
 
   async getVisit() {
     const url = `${this.url}/visit`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+
+  async getNews() {
+    const url = `${this.url}/news`;
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }

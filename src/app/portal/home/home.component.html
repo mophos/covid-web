@@ -55,23 +55,25 @@
           <div class="col-md-12 col-lg-3">
             <div class="text-right">
               <div class="global-text">
-                World
+                News
               </div>
             </div>
             <div class="overflow-auto global">
-              <div *ngFor="let i of dataGlobal">
+              <div *ngFor="let i of news">
                 <div class="card background-base-3 overflow-hidden">
                   <div class="card-body">
-                    <span class="text-country">{{i.country}}</span>
+                    <div class="news-topic bold">
+                      <span>{{i.head}}</span>
+                    </div>
+                    <div class="news-date">
+                      <span>{{i.datetime | datetime}}</span>
+                    </div>
+                    <div  class="news-detail">
+                      <span [innerHTML]="i.detail" ></span>
+                    </div>
                     <br>
-                    <span class="color-brown">ยืนยันแล้ว :
-                      {{+i.totalCases | number:'1.0-0'}}</span>
-                    <br>
-                    <span class="color-pink">เสียชีวิต :
-                      {{+i.totalDeaths | number:'1.0-0'}}</span>
-                    <br>
-                    <span class="color-green">รักษาหาย :
-                      {{+i.totalRecovered | number:'1.0-0'}}</span>
+                    <!-- <span class="color-green">รักษาหาย :
+                      {{+i.totalRecovered | number:'1.0-0'}}</span> -->
                   </div>
                 </div>
               </div>
@@ -229,8 +231,8 @@
 
             <div class="carousel-item img-slie" *ngFor="let i of info; let isFirst = first"
               [ngClass]="{active:isFirst}">
-              <a [href]="i.url" target="_blank">
-                <img [src]="i.url" class="d-block w-100" alt="...">
+              <a [href]="i.link" target="_blank">
+                <img [src]="i.img" class="d-block w-100" alt="...">
               </a>
             </div>
           </div>

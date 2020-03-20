@@ -15,11 +15,8 @@ export class HomeComponent implements OnInit {
   dataGlobal: any = [];
   country: any = [];
   pr = [];
-  info: any = [
-    { url: 'https://www3.dmsc.moph.go.th/images/map_sars_cov_2.jpg' },
-    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info17.jpg' },
-    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info16.jpg' },
-    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info14.jpg' }];
+  info: any = [];
+  news: any = [];
 
   constructor(
     private apiService: ApiService
@@ -37,6 +34,8 @@ export class HomeComponent implements OnInit {
     this.getSummaryTH();
     this.getSummaryGlobal();
     this.getPr();
+    this.getNews();
+    this.getInfographic();
 
   }
 
@@ -59,6 +58,17 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  async getNews() {
+    try {
+      const rs: any = await this.apiService.getNews();
+      if (rs.ok) {
+        this.news = rs.rows;
+      }
+    } catch (error) {
+
+    }
+  }
+
   async getSummaryGlobal() {
     try {
       const rs: any = await this.apiService.getSummaryGlobal();
@@ -75,6 +85,17 @@ export class HomeComponent implements OnInit {
       const rs: any = await this.apiService.getPr();
       if (rs.ok) {
         this.pr = rs.rows;
+      }
+    } catch (error) {
+
+    }
+  }
+
+  async getInfographic() {
+    try {
+      const rs: any = await this.apiService.getInfographic();
+      if (rs.ok) {
+        this.info = rs.rows;
       }
     } catch (error) {
 
