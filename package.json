@@ -25,7 +25,9 @@
     "fullpage.js": "^3.0.8",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
+    "ngx-device-detector": "^1.4.1",
     "popper.js": "^1.16.1",
+    "public-ip": "^4.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
