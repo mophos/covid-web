@@ -62,11 +62,15 @@
               <div *ngFor="let i of news">
                 <div class="card background-base-3 overflow-hidden">
                   <div class="card-body">
-                    <span class="text-country"  >{{i.head}}</span>
-                    <br>
-                    <span class="color-brown" >{{i.datetime | datetime}}</span>
-                    <br>
-                    <span class="color-green" [innerHTML]="i.detail" ></span>
+                    <div class="news-topic bold">
+                      <span>{{i.head}}</span>
+                    </div>
+                    <div class="news-date">
+                      <span>{{i.datetime | datetime}}</span>
+                    </div>
+                    <div  class="news-detail">
+                      <span [innerHTML]="i.detail" ></span>
+                    </div>
                     <br>
                     <!-- <span class="color-green">รักษาหาย :
                       {{+i.totalRecovered | number:'1.0-0'}}</span> -->
