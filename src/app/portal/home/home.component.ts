@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
     { url: 'https://www3.dmsc.moph.go.th/images/map_sars_cov_2.jpg' },
     { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info17.jpg' },
     { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info16.jpg' },
-    { url: 'https://ddc.moph.go.th/viralpneumonia/img/infographic/info14.jpg' }];
+    { url: 'https://ddc.moph.gFo.th/viralpneumonia/img/infographic/info14.jpg' }];
+  news:any = [];
 
   constructor(
     private apiService: ApiService
@@ -37,6 +38,7 @@ export class HomeComponent implements OnInit {
     this.getSummaryTH();
     this.getSummaryGlobal();
     this.getPr();
+    this.getNews();
 
   }
 
@@ -53,6 +55,17 @@ export class HomeComponent implements OnInit {
       const rs: any = await this.apiService.getSummaryTH();
       if (rs.ok) {
         this.dataTh = rs.rows;
+      }
+    } catch (error) {
+
+    }
+  }
+
+  async getNews() {
+    try {
+      const rs: any = await this.apiService.getNews();
+      if (rs.ok) {
+        this.news = rs.rows;
       }
     } catch (error) {
 

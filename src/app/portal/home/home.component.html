@@ -55,23 +55,21 @@
           <div class="col-md-12 col-lg-3">
             <div class="text-right">
               <div class="global-text">
-                World
+                News
               </div>
             </div>
             <div class="overflow-auto global">
-              <div *ngFor="let i of dataGlobal">
+              <div *ngFor="let i of news">
                 <div class="card background-base-3 overflow-hidden">
                   <div class="card-body">
-                    <span class="text-country">{{i.country}}</span>
+                    <span class="text-country"  >{{i.head}}</span>
                     <br>
-                    <span class="color-brown">ยืนยันแล้ว :
-                      {{+i.totalCases | number:'1.0-0'}}</span>
+                    <span class="color-brown" >{{i.datetime | datetime}}</span>
                     <br>
-                    <span class="color-pink">เสียชีวิต :
-                      {{+i.totalDeaths | number:'1.0-0'}}</span>
+                    <span class="color-green" [innerHTML]="i.detail" ></span>
                     <br>
-                    <span class="color-green">รักษาหาย :
-                      {{+i.totalRecovered | number:'1.0-0'}}</span>
+                    <!-- <span class="color-green">รักษาหาย :
+                      {{+i.totalRecovered | number:'1.0-0'}}</span> -->
                   </div>
                 </div>
               </div>
