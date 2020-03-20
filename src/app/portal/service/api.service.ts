@@ -41,4 +41,10 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+
+  async getNews() {
+    const url = `${this.url}/news`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 }
