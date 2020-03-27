@@ -7,9 +7,12 @@ import { PortalRoutingModule } from './portal-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { DeviceDetectorModule } from 'ngx-device-detector';
+import { BedsComponent } from './beds/beds.component';
+import { SuppliesComponent } from './supplies/supplies.component';
+import { ProfressionalComponent } from './profressional/profressional.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HomeComponent],
+  declarations: [LayoutComponent, HomeComponent, BedsComponent, SuppliesComponent, ProfressionalComponent],
   imports: [
     CommonModule,
     PortalRoutingModule,

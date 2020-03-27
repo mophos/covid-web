@@ -1,0 +1,140 @@
+<div class="container">
+    <br>
+    <h4>รายงานจำนวนเตียงตามสังกัด [ณ วันที่ {{date}}]</h4>
+    <br>
+    <table class="table  table-hover table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th rowspan="2">สังกัด</th>
+                <th rowspan="2"class="text-align-right">จำนวนโรงพยาบาล</th>
+                <th rowspan="2"class="text-align-right">เตียงทั้งหมด</th>
+                <th colspan="4" class="text-align-center">ประเภทเตียง</th>
+            </tr>
+            <tr>
+                <th  class="text-align-right">(1) AIIR</th>
+                <th  class="text-align-right">(2)Single room/Isolate room</th>
+                <th  class="text-align-right">(3)Cohort ward</th>
+                <th  class="text-align-right">(4)ICU</th>
+            </tr>
+
+        </thead>
+        <tbody>
+    
+            <tr  *ngFor="let b of beds" >
+                <td width="30%">{{b.name}}</td>
+                <td class="text-align-right">{{b.count | number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.aiir_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.isolate_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.cohort_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.icu_bed_total| number:'1.0-0'}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="table-warning">
+                <th>รวม</th>
+                <th class="text-align-right">{{sum.count| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.aiir_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.isolate_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.cohort_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.icu_bed_total| number:'1.0-0'}}</th>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+    <br>
+    <h4>รายงานจำนวนเตียงตามเขตสุขภาพ โรงพยาบาลสังกัดสำนักงานปลัดกระทรวงสาธารณสุข [ณ วันที่ {{date}}]</h4>
+    <br>
+    <table class="table  table-hover table-sm" *ngFor="let b of bedOps" >
+        <thead class="thead-light">
+            <tr>
+                <th colspan="7">เขต {{b.zone_code}}</th>
+            </tr>
+            <tr>
+                <th rowspan="2">จังหวัด</th>
+                <th rowspan="2"class="text-align-right">จำนวนโรงพยาบาล</th>
+                <th rowspan="2"class="text-align-right">เตียงทั้งหมด</th>
+                <th colspan="4" class="text-align-center">ประเภทเตียง</th>
+            </tr>
+            <tr>
+                <th  class="text-align-right">(1) AIIR</th>
+                <th  class="text-align-right">(2)Single room/Isolate room</th>
+                <th  class="text-align-right">(3)Cohort ward</th>
+                <th  class="text-align-right">(4)ICU</th>
+            </tr>
+
+        </thead>
+        <tbody>
+    
+            <tr *ngFor="let i of b.detail">
+                <td width="20%">{{i.province_name}}</td>
+                <td class="text-align-right">{{i.count | number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.aiir_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.isolate_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.cohort_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.icu_bed_total| number:'1.0-0'}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="table-warning">
+                <th>รวม</th>
+                <th class="text-align-right">{{b.count| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.aiir_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.isolate_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.cohort_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.icu_bed_total| number:'1.0-0'}}</th>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+    <h4>รายงานจำนวนเตียงตามเขตสุขภาพ โรงพยาบาลนอกสังกัดสำนักงานปลัดกระทรวงสาธารณสุข [ณ วันที่ {{date}}]</h4>
+    <br>
+    <table class="table  table-hover table-sm" *ngFor="let b of bedOutOps" >
+        <thead class="thead-light">
+            <tr>
+                <th colspan="7">เขต {{b.zone_code}}</th>
+            </tr>
+            <tr>
+                <th rowspan="2">จังหวัด</th>
+                <th rowspan="2"class="text-align-right">จำนวนโรงพยาบาล</th>
+                <th rowspan="2"class="text-align-right">เตียงทั้งหมด</th>
+                <th colspan="4" class="text-align-center">ประเภทเตียง</th>
+            </tr>
+            <tr>
+                <th  class="text-align-right">(1) AIIR</th>
+                <th  class="text-align-right">(2)Single room/Isolate room</th>
+                <th  class="text-align-right">(3)Cohort ward</th>
+                <th  class="text-align-right">(4)ICU</th>
+            </tr>
+
+        </thead>
+        <tbody>
+    
+            <tr *ngFor="let i of b.detail">
+                <td width="20%">{{i.province_name}}</td>
+                <td class="text-align-right">{{i.count | number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.aiir_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.isolate_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.cohort_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{i.icu_bed_total| number:'1.0-0'}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="table-warning">
+                <th>รวม</th>
+                <th class="text-align-right">{{b.count| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.aiir_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.isolate_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.cohort_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.icu_bed_total| number:'1.0-0'}}</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
