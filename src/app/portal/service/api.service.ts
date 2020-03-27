@@ -53,4 +53,32 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+
+  async getBedOps() {
+    const url = `${this.url}/eocdms/bed/province`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+  async getBedSumary() {
+    const url = `${this.url}/eocdms/bed-sumary`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+  async getDoctor() {
+    const url = `${this.url}/eocdms/doctor`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+
+  async getBedOutOps() {
+    const url = `${this.url}/eocdms/bed-out-ops/province`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+
+  async getSupplieOps() {
+    const url = `${this.url}/eocdms/supplie/province`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 }
