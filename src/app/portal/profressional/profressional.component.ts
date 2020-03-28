@@ -9,6 +9,7 @@ import * as moment from 'moment';
 export class ProfressionalComponent implements OnInit {
 
   data = [];
+  dataGroup = [];
   date: any;
   constructor(
     private apiService: ApiService
@@ -16,10 +17,26 @@ export class ProfressionalComponent implements OnInit {
 
   ngOnInit() {
     this.getDoctor();
+    this.getDoctorGroupType();
+
     this.date = `${moment().format('DD/MM/')}${(+moment().format('YYYY') + 543)}`;
   }
 
 
+  async getDoctorGroupType() {
+    try {
+      const rs: any = await this.apiService.getDoctorGroupType();
+      if (rs.ok) {
+        this.dataGroup = rs.rows;
+      } else {
+        console.log(rs.error);
+
+      }
+    } catch (error) {
+      console.log(error);
+
+    }
+  }
   async getDoctor() {
     try {
       const rs: any = await this.apiService.getDoctor();

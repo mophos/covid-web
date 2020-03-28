@@ -69,6 +69,11 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+  async getDoctorGroupType() {
+    const url = `${this.url}/eocdms/doctor-group-type`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 
   async getBedOutOps() {
     const url = `${this.url}/eocdms/bed-out-ops/province`;

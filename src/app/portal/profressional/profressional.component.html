@@ -1,33 +1,43 @@
 <div class="container">
   <br>
-  <h4>รายงานจำนวนบุคลากร [ณ วันที่ {{date}}]</h4>
+  <h4>รายงานจำนวนบุคลากรแยกตามตำแหน่ง [ณ วันที่ {{date}}]</h4>
   <br>
   <table class="table  table-hover table-sm">
     <thead class="thead-light">
       <tr>
-        <th>สังกัด</th>
         <th>ตำแหน่ง</th>
         <th class="text-align-right">จำนวน</th>
       </tr>
     </thead>
     <tbody>
 
-      <tr *ngFor="let b of data">
-        <td >{{b.department}}</td>
+      <tr *ngFor="let b of dataGroup">
         <td >{{b.experttype}}</td>
         <td class="text-align-right">{{b.numberofperson| number:'1.0-0'}}</td>
       </tr>
     </tbody>
-    <!-- <tfoot>
-      <tr class="table-warning">
-        <th>รวม</th>
-        <th class="text-align-right">{{sum.count| number:'1.0-0'}}</th>
-        <th class="text-align-right">{{sum.total| number:'1.0-0'}}</th>
-        <th class="text-align-right">{{sum.aiir_total| number:'1.0-0'}}</th>
-        <th class="text-align-right">{{sum.isolate_total| number:'1.0-0'}}</th>
-        <th class="text-align-right">{{sum.cohort_total| number:'1.0-0'}}</th>
-        <th class="text-align-right">{{sum.icu_bed_total| number:'1.0-0'}}</th>
-      </tr>
-    </tfoot> -->
   </table>
+  <br>
+  <br>
+  <h4>รายงานจำนวนบุคลากรแยกตามสังกัด [ณ วันที่ {{date}}]</h4>
+  <br>
+  <table class="table  table-hover table-sm">
+    <thead class="thead-light">
+      <tr>
+          <th>ตำแหน่ง</th>
+        <th>สังกัด</th>
+        <th class="text-align-right">จำนวน</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let b of data">
+          <td >{{b.experttype}}</td>
+        <td >{{b.department}}</td>
+        <td class="text-align-right">{{b.numberofperson| number:'1.0-0'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <h6>แหล่งที่มาของข้อมูล : EOC กระทรวงสาธารณสุข และ กรมการแพทย์</h6>
 </div>
