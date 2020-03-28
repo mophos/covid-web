@@ -1,0 +1,13 @@
+<div class="container">
+  <br>
+  <div class="card" style="width: 100%">
+    <div class="card-body">
+      <h5 class="card-title">ข้อสั่งการ</h5>
+      <p class="card-text" *ngFor="let i of data">
+          <span [innerHTML]="i.html" ></span>
+          
+      </p>
+    </div>
+  </div>
+  <br>
+</div>
