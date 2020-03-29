@@ -94,7 +94,7 @@
     background: #262C50;
 }
 
-.card {
+.card2 {
     border-radius: 0px;
     border-style: solid;
     border-width: 0px 0px 1px 0px;
@@ -104,7 +104,7 @@
     font-family: 'Kanit';
 }
 
-.card-body {
+.card-body2 {
     padding: 0.5rem;
 }
 
@@ -494,7 +494,7 @@
     }
     .moph {
         height: 40px;
-        width: auto;
+        width: 50%;
     }
     .moph-img {
         height: 40px;

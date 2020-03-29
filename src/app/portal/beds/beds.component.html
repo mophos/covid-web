@@ -5,17 +5,28 @@
     <table class="table  table-hover table-sm">
         <thead class="thead-light">
             <tr>
-                <th rowspan="2">สังกัด</th>
-                <th rowspan="2"class="text-align-right">จำนวนโรงพยาบาล</th>
-                <th rowspan="2"class="text-align-right">เตียงทั้งหมด</th>
-                <th colspan="4" class="text-align-center">ประเภทเตียง</th>
+                <th rowspan="3">สังกัด</th>
+                <th rowspan="3"class="text-align-right">จำนวนโรงพยาบาล</th>
+                <th rowspan="3"class="text-align-right">เตียงทั้งหมด</th>
+                <th colspan="8" class="text-align-center">ประเภทเตียง</th>
+            </tr> 
+            <tr>
+                <th colspan="2" class="text-align-right">(1) AIIR</th>
+                <th colspan="2" class="text-align-right">(2)Single/Isolate room</th>
+                <th colspan="2" class="text-align-right">(3)Cohort ward</th>
+                <th colspan="2" class="text-align-right">(4)ICU</th>
             </tr>
             <tr>
-                <th  class="text-align-right">(1) AIIR</th>
-                <th  class="text-align-right">(2)Single room/Isolate room</th>
-                <th  class="text-align-right">(3)Cohort ward</th>
-                <th  class="text-align-right">(4)ICU</th>
+                <th class="text-align-right">ทั้งหมด</th>
+                <th class="text-align-right">ว่าง</th>
+                <th class="text-align-right">ทั้งหมด</th>
+                <th class="text-align-right">ว่าง</th>
+                <th class="text-align-right">ทั้งหมด</th>
+                <th class="text-align-right">ว่าง</th>
+                <th class="text-align-right">ทั้งหมด</th>
+                <th class="text-align-right">ว่าง</th>
             </tr>
+           
 
         </thead>
         <tbody>
@@ -25,9 +36,13 @@
                 <td class="text-align-right">{{b.count | number:'1.0-0'}}</td>
                 <td class="text-align-right">{{b.total| number:'1.0-0'}}</td>
                 <td class="text-align-right">{{b.aiir_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.aiir_available| number:'1.0-0'}}</td>
                 <td class="text-align-right">{{b.isolate_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.isolate_available| number:'1.0-0'}}</td>
                 <td class="text-align-right">{{b.cohort_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.cohort_available| number:'1.0-0'}}</td>
                 <td class="text-align-right">{{b.icu_bed_total| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{b.icu_bed_available| number:'1.0-0'}}</td>
             </tr>
         </tbody>
         <tfoot>
@@ -36,9 +51,13 @@
                 <th class="text-align-right">{{sum.count| number:'1.0-0'}}</th>
                 <th class="text-align-right">{{sum.total| number:'1.0-0'}}</th>
                 <th class="text-align-right">{{sum.aiir_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.aiir_available| number:'1.0-0'}}</th>
                 <th class="text-align-right">{{sum.isolate_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.isolate_available| number:'1.0-0'}}</th>
                 <th class="text-align-right">{{sum.cohort_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.cohort_available| number:'1.0-0'}}</th>
                 <th class="text-align-right">{{sum.icu_bed_total| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{sum.icu_bed_available| number:'1.0-0'}}</th>
             </tr>
         </tfoot>
     </table>

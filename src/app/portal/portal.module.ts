@@ -10,9 +10,10 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
 import { BedsComponent } from './beds/beds.component';
 import { SuppliesComponent } from './supplies/supplies.component';
 import { ProfressionalComponent } from './profressional/profressional.component';
+import { CommandComponent } from './command/command.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HomeComponent, BedsComponent, SuppliesComponent, ProfressionalComponent],
+  declarations: [LayoutComponent, HomeComponent, BedsComponent, SuppliesComponent, ProfressionalComponent, CommandComponent],
   imports: [
     CommonModule,
     PortalRoutingModule,

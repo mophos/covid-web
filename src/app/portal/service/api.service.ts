@@ -86,4 +86,9 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+  async getCommand() {
+    const url = `${this.url}/command`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 }

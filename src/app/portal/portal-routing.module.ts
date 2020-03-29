@@ -1,3 +1,4 @@
+import { CommandComponent } from './command/command.component';
 import { ProfressionalComponent } from './profressional/profressional.component';
 import { SuppliesComponent } from './supplies/supplies.component';
 import { BedsComponent } from './beds/beds.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
       { path: 'beds', component: BedsComponent },
       { path: 'supplies', component: SuppliesComponent },
       { path: 'professional', component: ProfressionalComponent },
+      { path: 'command', component: CommandComponent },
     ]
   }];
 
