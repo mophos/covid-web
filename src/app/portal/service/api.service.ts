@@ -81,8 +81,13 @@ export class ApiService {
     return rs;
   }
 
-  async getSupplieOps() {
+  async getSupplieOpsProvince() {
     const url = `${this.url}/eocdms/supplie/province`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+  async getSupplieOps() {
+    const url = `${this.url}/eocdms/supplie`;
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
