@@ -2,7 +2,7 @@
     <br>
     <h4>รายงานจำนวนเวชภัณฑ์สิ้นเปลืองตามเขตสุขภาพ โรงพยาบาลสังกัดสำนักงานปลัดกระทรวงสาธารณสุข [ณ วันที่ {{date}}]</h4>
     <br>
-    <table class="table  table-hover table-sm" *ngFor="let b of beds" >
+    <table class="table  table-hover table-sm" *ngFor="let b of bedProvince" >
         <thead class="thead-light">
             <tr>
                 <th colspan="12">เขต {{b.zone_code}}</th>
@@ -66,6 +66,73 @@
                 <th class="text-align-right">{{b.med_flavipiravir_tab_used_month| number:'1.0-0'}}</th>
             </tr>
         </tfoot>
+    </table>
+    <br>
+    <br>
+    <table class="table  table-hover table-sm" *ngFor="let b of beds" >
+        <thead class="thead-light">
+            <tr>
+                <th colspan="12">เขต {{b.zone_code}}</th>
+            </tr>
+            <tr>
+                <th rowspan="3">จังหวัด</th>
+                <th colspan="10" class="text-align-center">เวชภัณฑ์สิ้นเปลือง</th>
+            </tr>
+            <tr>
+                <th colspan="2" class="text-align-center">(1)MASK N95</th>
+                <th colspan="2" class="text-align-center">(2)Sugical mask</th>
+                <th colspan="2" class="text-align-center">(3)Gown</th>
+                <th colspan="2" class="text-align-center">(4)Cover All</th>
+                <th colspan="2" class="text-align-center">(5)Flavipiravir</th>
+            </tr>
+            <tr>
+                <th  class="text-align-right">คงคลัง(ชิ้น)</th>
+                <th  class="text-align-right">ใช้/เดือน(ชิ้น)</th>
+                <th  class="text-align-right">คงคลัง(ชิ้น)</th>
+                <th  class="text-align-right">ใช้/เดือน(ชิ้น)</th>
+                <th  class="text-align-right">คงคลัง(ชิ้น)</th>
+                <th  class="text-align-right">ใช้/เดือน(ชิ้น)</th>
+                <th  class="text-align-right">คงคลัง(ชิ้น)</th>
+                <th  class="text-align-right">ใช้/เดือน(ชิ้น)</th>
+                <th  class="text-align-right">คงคลัง(ชิ้น)</th>
+                <th  class="text-align-right">ใช้/เดือน(ชิ้น)</th>
+            </tr>
+
+        </thead>
+        <tbody *ngFor="let p of b.provinces">
+            <tr class="table-success">
+                <td colspan="11">{{p.province_name}}</td>
+            </tr>
+            <tr *ngFor="let h of p.hospitals">
+                <td width="20%">{{h.hospname}}</td>
+                <td class="text-align-right">{{h.mask_n95| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.mask_n95_used_month| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.sugical_mask| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.sugical_mask_used_month| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.water_resistance_gown| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.water_resistance_gown_used_month| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.cover_all| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.cover_all_used_month| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.med_flavipiravir_tab| number:'1.0-0'}}</td>
+                <td class="text-align-right">{{h.med_flavipiravir_tab_used_month| number:'1.0-0'}}</td>
+            </tr>
+        </tbody>
+        <!-- <tfoot>
+            <tr class="table-warning">
+                <th>รวม</th>
+                <th class="text-align-right">{{b.count| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.mask_n95| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.mask_n95_used_month| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.sugical_mask| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.sugical_mask_used_month| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.water_resistance_gown| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.water_resistance_gown_used_month| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.cover_all| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.cover_all_used_month| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.med_flavipiravir_tab| number:'1.0-0'}}</th>
+                <th class="text-align-right">{{b.med_flavipiravir_tab_used_month| number:'1.0-0'}}</th>
+            </tr>
+        </tfoot> -->
     </table>
     <h6>แหล่งที่มาของข้อมูล : EOC กระทรวงสาธารณสุข และ กรมการแพทย์</h6>
 </div>
