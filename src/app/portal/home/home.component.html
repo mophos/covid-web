@@ -26,7 +26,8 @@
                   </div>
                   <div class="col-4 padding-0">
                     <div class="box-3 background-base-3">
-                      <span class="text-box"><i class="fa fa-ambulance icon-box" aria-hidden="true"></i> รักษาอยู่</span>
+                      <span class="text-box"><i class="fa fa-ambulance icon-box" aria-hidden="true"></i>
+                        รักษาอยู่</span>
                       <div class="number-box">
                         {{+dataTh.confirm_hospital| number:'1.0-0'}}
                       </div>
@@ -68,8 +69,8 @@
                     <div class="news-date">
                       <span>{{i.datetime | datetime}}</span>
                     </div>
-                    <div  class="news-detail">
-                      <span [innerHTML]="i.detail" ></span>
+                    <div class="news-detail">
+                      <span [innerHTML]="i.detail"></span>
                     </div>
                     <br>
                     <!-- <span class="color-green">รักษาหาย :
@@ -106,7 +107,7 @@
               {{+dataTh.observe_new | number:'1.0-0' }}
             </div>
           </div>
-          <div class="col-4 watch-out-text">
+          <!-- <div class="col-4 watch-out-text">
             <div>
               เฝ้าระวังที่รพ.
             </div>
@@ -129,7 +130,7 @@
             <div class="watch-out-number color-red">
               {{+dataTh.observe_ovserve | number:'1.0-0' }}
             </div>
-          </div>
+          </div> -->
           <div class="col-12 padding-0">
             <div class="screening-topic">
               ผู้เดินทางที่คัดกรองสะสม(คน)
@@ -165,6 +166,9 @@
               {{+dataTh.traffic_immigration_chaengwattana | number:'1.0-0' }}
             </div>
           </div>
+        </div>
+        <div class="row" style="font-family:Kanit;margin-top:0.5rem;">
+          <b>{{dataTh.part2_reference}}</b>
         </div>
       </div>
     </div>
