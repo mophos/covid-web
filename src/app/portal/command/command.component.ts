@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommandComponent implements OnInit {
 
-  data = [];
+  html: any;
+  url: any;
   constructor(
     private apiService: ApiService
   ) { }
@@ -21,9 +22,9 @@ export class CommandComponent implements OnInit {
     try {
       const rs: any = await this.apiService.getCommand();
       if (rs.ok) {
-        this.data = rs.rows;
-        console.log(this.data);
-        
+        // this.data = rs.rows[0].html;
+        this.url = rs.rows[0].url;
+        this.html = rs.rows[0].html;
       }
     } catch (error) {
 
