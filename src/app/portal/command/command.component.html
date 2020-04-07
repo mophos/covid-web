@@ -1,6 +1,6 @@
 <!-- <div class="container"> -->
   <!-- <br> -->
-    <iframe width="100%" height="1000" [src]="url | safe"></iframe>
-    <div  [innerHTML]="html"></div>
+    <iframe width="100%" height="1000" *ngIf="url" [src]="url | safe"></iframe>
+    <div *ngIf="html" [innerHTML]="html"></div>
   <!-- <br> -->
 <!-- </div> -->
