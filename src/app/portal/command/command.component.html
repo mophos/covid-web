@@ -1,13 +1,6 @@
-<div class="container">
-  <br>
-  <div class="card" style="width: 100%">
-    <div class="card-body">
-      <h5 class="card-title">ข้อสั่งการ</h5>
-      <p class="card-text" *ngFor="let i of data">
-          <span [innerHTML]="i.html" ></span>
-          
-      </p>
-    </div>
-  </div>
-  <br>
-</div>
+<!-- <div class="container"> -->
+  <!-- <br> -->
+    <iframe width="100%" height="1000" *ngIf="url" [src]="url | safe"></iframe>
+    <div *ngIf="html" [innerHTML]="html"></div>
+  <!-- <br> -->
+<!-- </div> -->
