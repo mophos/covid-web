@@ -4,8 +4,11 @@
   </div>
   <div style="float: left;width:50%;">
     <div class="text-align-right" >
-      <button class="btn btn-light" [routerLink]="['/portal/command']" routerLinkActive="router-link-active" >
+      <button class="btn btn-light" *ngIf="portal" [routerLink]="['/portal/command']" (click)="page()" routerLinkActive="router-link-active" >
         เจ้าหน้าที่
+      </button>
+      <button class="btn btn-light" *ngIf="!portal" [routerLink]="['/portal']" (click)="page()" routerLinkActive="router-link-active" >
+        HOME
       </button>
     </div>
   </div>

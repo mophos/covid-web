@@ -9,6 +9,8 @@ import { ApiService } from './../service/api.service';
 export class LayoutComponent implements OnInit {
 
   visit: any
+  portal: any = true
+
   constructor(
     private apiService: ApiService
   ) { }
@@ -26,6 +28,10 @@ export class LayoutComponent implements OnInit {
     } catch (error) {
 
     }
+  }
+
+  page() {
+    this.portal = !this.portal;
   }
 
 }
