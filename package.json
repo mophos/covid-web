@@ -22,7 +22,7 @@
     "@fullpage/angular-fullpage": "0.0.14",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
-    "fullpage.js": "^3.0.8",
+    "fullpage.js": "^4.0.5",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "ngx-device-detector": "^1.4.1",
